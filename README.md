@@ -11,7 +11,7 @@ a sample project.
 This app can be installed and used in your django project by:
 
 ```
-$ pip install realpython-django-receipts
+$ pip install django-form-builders
 ```
 
 Edit your settings.py file to include 'form_builders' in the INSTALLED_APPS listing.
