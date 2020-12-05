@@ -27,7 +27,7 @@ url_patterns = [
 Finally, add the models to your database:
 
 ```
-$ ./manage.py makemigrations receipts
+$ ./manage.py makemigrations form_builders
 ```
 
 ### **Usage**
