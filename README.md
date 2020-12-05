@@ -79,3 +79,7 @@ Ex.
 Then you can finally go to admin and see submitted forms.
 
 ![](readme_images/admin_display.png)
+
+## **Docs & Source**
+
+* PyPI: https://pypi.org/project/django-form-builders
