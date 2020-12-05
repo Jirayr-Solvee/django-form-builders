@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Django Form Builders</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link href="{% static 'form_buiilders/lib/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'form_buiilders/lib/bootstrap-responsive.min.css' %}" rel="stylesheet">
+    <link href="{% static 'form_buiilders/custom.css' %}" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+          <a class="brand" href="#">Django Form Builders</a>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row clearfix">
+        <!-- Building Form. -->
+        <div class="span6">
+          <div class="clearfix">
+            <h2>Request Form</h2>
+            <hr>
+            <div id="build">
+              <form id="target" class="form-horizontal">
+              </form>
+            </div>
+          </div>
+          <button id='the-button'>Confirm</button>
+        </div>
+        <!-- / Building Form. -->
+
+        <!-- Components -->
+        <div class="span6">
+          <h2>Drag & Drop components</h2>
+          <hr>
+          <div class="tabbable">
+            <ul class="nav nav-tabs" id="formtabs">
+              <!-- Tab nav -->
+            </ul>
+            <form class="form-horizontal" id="components">
+              <fieldset>
+                <div class="tab-content">
+                  <!-- Tabs of snippets go here -->
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+        <!-- / Components -->
+
+      </div>
+
+    </div> <!-- /container -->
+
+    <script data-main="{% static 'form_buiilders/js/main-built.js' %}" src="{% static 'form_buiilders/js/require.js' %}" ></script>
+  </body>
+</html>
