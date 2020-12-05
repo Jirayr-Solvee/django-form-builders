@@ -1,4 +1,4 @@
-## ** django-form-builders **
+## **django-form-builders**
 
 Django package for building and populating custom forms. </br>
 Django form builder is made for creating and populating forms which we can't define in models beforehand.
@@ -6,7 +6,7 @@ We use bootstrap form builder by [Adam Moore!](https://github.com/minikomi/Boots
 for JSON in TextField format so you can use it with sqlite3 also. Bellow you can see step by step installation and also
 a sample project.
 
-### ** Installable App **
+### **Installable App**
 
 This app can be installed and used in your django project by:
 
@@ -30,7 +30,7 @@ Finally, add the models to your database:
 $ ./manage.py makemigrations receipts
 ```
 
-### ** Usage **
+### **Usage**
 
 This app has 3 main functions.
 
@@ -40,15 +40,14 @@ This app has 3 main functions.
 
 So lets go step by step.
 
-** Creating forms **
-
+**Creating forms**
 Navigate to http://localhost:8000/form_builders/create
 
 Move needed fields from right to left, give name to your form and press create button.
 
 ![](readme_images/form_builder.png)
 
-** Getting details about the form **
+**Getting details about the form**
 
 After creating a form in the previous step, now we can get list of all forms then choose one and get fields of it.
 
@@ -60,7 +59,7 @@ This one returns all created forms. For getting details of one of the listed for
 
 There you can see all fields and parameters for them.
 
-** Populating created forms **
+**Populating created forms**
 
 `POST http://localhost:8000/form_builders/post-form`
 
