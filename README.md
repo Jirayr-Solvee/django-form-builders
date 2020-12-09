@@ -74,7 +74,7 @@ Ex.
        }
     }
 
-** Result **
+**Result**
 
 Then you can finally go to admin and see submitted forms.
 
