@@ -9,6 +9,7 @@ from django.core import serializers
 from django.template import loader
 from django.shortcuts import get_object_or_404
 from django.http import Http404
+from django.core.exceptions import BadRequest
 
 # Project imports
 from form_builders.models import CreatedForms, SubmittedForms
@@ -22,12 +23,16 @@ def index(request):
 
 def create_form(request):
     if request.method == "POST":
-        data = json.loads(request.body.decode(encoding="UTF-8"))
-        created_form = models.CreatedForms.objects.create(
+        try:
+            data = json.loads(request.body.decode(encoding="UTF-8"))
+            created_form = models.CreatedForms.objects.create(
             name=str(data["title"]), fields=str(data["fields"]))
-        serialized_form = serializers.serialize("json", [created_form])
-        return JsonResponse(serialized_form, safe=False)
-
+            serialized_form = serializers.serialize("json", [created_form])
+            return JsonResponse(serialized_form, safe=False)
+        except KeyError:
+            raise BadRequest("Invalid fields")
+        except json.decoder.JSONDecodeError:
+            raise BadRequest("Invalid data")
 
 def get_forms_list(request):
     if request.method == "GET":
